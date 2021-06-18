@@ -72,7 +72,7 @@ section {
 
 /* Hero Style Start */
 .hero {
-  background-image: url('../images/hero-bg.jpg');
+  background-image: url("/Users/georgengo/Coding_Boot_Camp/Module_1/projects/run-buddy/Run-buddy/hero-bg.jpeg");
   height: 600px;
   background-size: cover;
   background-position: center;
