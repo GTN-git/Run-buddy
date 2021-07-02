@@ -11,12 +11,11 @@
 }
 
 body {
-  /* more on this crazy alphanumerical value in a minute! */
   color: var(--tertiary-color);
   font-family: Helvetica, Arial, sans-serif;
 }
 
-/* apply styles to <header> */
+/* Header / NAV BAR STYLES START */
 header {
   padding: 20px 35px;
   background-color: var(--tertiary-color);
@@ -71,9 +70,14 @@ header nav ul li a:hover {
   text-shadow: none;
 }
 
+/* Header / NAVBAR STYLES END*/
+
+/* FOOTER STYLES START */
+
 footer {
   background: var(--primary-color);
   width: 100%;
+  display: flex;
   padding: 40px 35px;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -87,12 +91,16 @@ footer h2 {
 
 footer div {
   line-height: 1.5;
+  text-align: right;
 }
 
 footer a {
   color: var(--secondary-color);
 }
 
+/*END FOOTER STYLES */
+
+/* STYLE ALL SECTION TAGS */
 section {
   padding: 60px;
 }
@@ -124,7 +132,6 @@ section {
   color: var(--primary-color);
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-/* Hero Style End */
 
 .hero-form {
   border: 3px solid var(--secondary-color);
@@ -137,6 +144,49 @@ section {
   border-radius: 15px;
 }
 
+.hero-form button:hover {
+  background-color: var(--tertiary-color);
+}
+
+.hero-form h3 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.hero-form p {
+  margin: 5px 0 15px 0;
+}
+
+.form-input {
+  border: 1px solid var(--secondary-color);
+  display: block;
+  padding: 7px 15px;
+  font-size: 16px;
+  color: var(--secondary-color);
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  background-color: rgba(255,255,255,.75);
+}
+
+.form-input:focus{
+  background-color: rgba(255,255,255, 1);
+  outline: none;
+  }
+  
+  .hero-form label {
+    margin: 0 5px;
+  }
+
+  .hero-form button {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+  
 .checkbox-wrapper input, .radio-wrapper input {
   opacity: 0;
 }
@@ -197,48 +247,29 @@ section {
   content: "";
 }
 
-.hero-form h3 {
-  font-size: 24px;
-  margin: 0;
-}
-.hero-form p {
-  margin: 5px 0 15px 0;
-}
+/* HERO STYLES END*/
 
-.form-input {
-  border: 1px solid var(--secondary-color);
-  display: block;
-  padding: 7px 15px;
-  font-size: 16px;
+/* SECTION TITLE STYLES START */
+.section-title {
+  font-size: 48px;
   color: var(--secondary-color);
-  width: 100%;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  background-color: rgba(255,255,255,.75);
+  border-bottom: 3px solid;
+  padding-bottom: 20px;
+  text-align: center;
+  margin: 0 auto 35px auto;
+  width: 50%;
 }
 
-.form-input:focus{
-background-color: rgba(255,255,255, 1);
-outline: none;
+.primary-border {
+  border-color: var(--primary-color);
 }
 
-.hero-form label {
-  margin: 0 5px;
+.secondary-border {
+  border-color: var(--tertiary-color);
 }
+/* SECTION TITLE STYLES END */
 
-.hero-form button {
-  color: var(--primary-color);
-  background-color: var(--secondary-color);
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 10px;
-}
-
-.hero-form button:hover {
-  background-color: var(--tertiary-color);
-}
-
+/* WHAT WE DO STYLES */
 .intro p {
   line-height: 1.7;
   color: var(--tertiary-color);
@@ -247,6 +278,10 @@ outline: none;
   margin: 0 auto;
   text-align: center;
 }
+
+/* WHAT WE DO STYLES END */
+
+/* WHAT YOU DO STYLES START */
 
 .steps {
   background: var(--primary-color);
@@ -267,6 +302,18 @@ outline: none;
   border-bottom: none;
 }
 
+.step h3 {
+  color: var(--secondary-color);
+  font-size: 46px;
+  flex: 1 30%;
+}
+
+.step-info {
+  flex: 2 70%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
 .step-img {
   flex: 1 12%;
   margin-right: 20px;
@@ -280,19 +327,6 @@ outline: none;
   flex: 12;
 }
 
-.step h3 {
-  color: var(--secondary-color);
-  font-size: 46px;
-  flex: 1 30%;
-}
-
-.step-info {
-  flex: 2 70%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
 .step-text p {
   color: var(--tertiary-color);
   font-size: 18px;
@@ -303,25 +337,9 @@ outline: none;
   line-height: 1.5;
   color: var(--secondary-color);
 }
+/* WHAT YOU DO STYLES END */
 
-.section-title {
-  font-size: 48px;
-  color: var(--secondary-color);
-  border-bottom: 3px solid;
-  padding-bottom: 20px;
-  text-align: center;
-  margin: 0 auto 35px auto;
-  width: 50%;
-}
-
-.primary-border {
-  border-color: var(--primary-color);
-}
-
-.secondary-border {
-  border-color: var(--tertiary-color);
-}
-
+/* MEET THE TRAINERS START */
 .trainers {
   width: 100%;
   margin: 0 auto;
@@ -359,18 +377,8 @@ outline: none;
 .trainer-bio p {
   font-size: 17px;
 }
+/* TRAINER STYLES END */
 
-.text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.flex-row {
-  display: flex;
-}
 
 /* REACH OUT STYLES START */
 .contact {
@@ -379,14 +387,6 @@ outline: none;
 
 .contact h2 {
   color: var(--primary-color);
-}
-
-.contact-info iframe {
-  height: 400px;
-}
-
-.contact-info div {
-  color: white;
 }
 
 .contact-info {
@@ -399,14 +399,20 @@ outline: none;
   flex: 1;
   margin: 15px;
 }
+.contact-info iframe {
+  height: 400px;
+}
+
+.contact-info div {
+  color: white;
+}
 
 .contact-info h3 {
   color: var(--primary-color);
   font-size: 32px;
 }
 
-.contact-info p,
-.contact-info address {
+.contact-info p, .contact-info address {
   margin: 20px 0;
   line-height: 1.5;
   font-size: 16px;
@@ -450,6 +456,22 @@ outline: none;
 .contact-info a {
   color: var(--primary-color);
 }
+/* REACH OUT STYLES END */
+
+/* UTILITIES */
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.flex-row {
+  display: flex;
+}
+
+
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
